@@ -1,0 +1,54 @@
+body{
+    background-color: hsl(212, 45%, 89%);
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200, 400;
+}
+
+
+.container{
+    min-width: 140px;
+    max-width: 200px;
+    margin:10% 45%;
+    padding: 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.card {
+    
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.card img{
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.card .card-header{
+    padding: 5px 5px;
+    color: darkgray;
+}
+
+.card .card-body{
+    padding: 0 5PX;
+    color: hsl(218, 44%, 22%);
+
+}
+
+.card .card-body p{
+    color: hsl(220, 15%, 55%);
+    font-size: 13px;
+}
+
