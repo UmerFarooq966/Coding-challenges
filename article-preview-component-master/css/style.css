@@ -78,7 +78,6 @@ img{
     padding: 10px 10px;
     margin-right: 40px;
     border-radius: 100%;
-    position: sticky;
     top:100%;
     right: 50%;
     transform: translate(100%, -35%);
@@ -91,23 +90,41 @@ img{
 }
 
 .article .card .card-body .footer .share-icon .sharebar{
-    display: none;
-    position: static;
-    top:100%;
-    right: 50%;
-    transform: translate(20%, -45%);
+  position: relative;
+  display: inline-block;
+  visibility: hidden;
+
 
 }
 .article .card .card-body .footer .share-icon .sharebar .container{
-    background-color: hsl(217, 19%, 35%);
-    padding: 14px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    color: #fff;
-    align-items: center; 
+   width: 200px;
+   background-color: hsl(217, 19%, 35%);
+   color: #fff;
+   border-radius: 30px;
+   padding: 10px 0px 10px 5px;
+   position: absolute;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1;
+   top: 50%;
+   left: 50%;
+   transform: translate(-23%,-170%);
     
 }
+
+.article .card .card-body .footer .share-icon .sharebar .container::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
 .article .card .card-body .footer .share-icon .sharebar .container i{
     padding: 0 4px;
     color: #fff;
@@ -115,10 +132,21 @@ img{
 }
 
 .article .card .card-body .footer .share-icon .sharebar.active{
-    display: block;
-    
-}
-
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1;}
+  }
 
 
 
